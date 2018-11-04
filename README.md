@@ -11,6 +11,7 @@ Table of Contents
 
 Summary
 List of Vulnerabilities found
+
 -[!] Title: WordPress 4.2-4.7.2 - Press This CSRF DoS
 
 -[!] Title: WordPress 2.3-4.8.3 - Host Header Injection in Password Reset
