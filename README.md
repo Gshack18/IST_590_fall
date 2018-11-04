@@ -1,12 +1,12 @@
 # IST_590_fall
-# this is for IST 590 class
-
+# This is for IST 590 class
 
 # Project 7 - WordPress Pentesting
 
 ## Pentesting Report
 
-##For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the plug in so I was tasked with finding vulnerabilities from a WPS scan so I am tasked with reporting from Professor Rains WPS scan output. 
+## For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the ## plug in so I was tasked with finding vulnerabilities from a WPS scan so I am tasked with reporting from Professor Rains WPS ## scan output. 
+
 Time spent: 9 hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
