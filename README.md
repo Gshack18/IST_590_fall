@@ -4,6 +4,9 @@
 
 # Project 7 - WordPress Pentesting
 
+## Pentesting Report
+
+##For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the plug in so I was tasked with finding vulnerabilities from a WPS scan so I am tasked with reporting from Professor Rains WPS scan output. 
 Time spent: 9 hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
@@ -21,9 +24,6 @@ List of Vulnerabilities found
 -[!] Title: WordPress <= 4.3 - User List Table Cross-Site Scripting (XSS)
 
 
-## Pentesting Report
-
-##For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the plug in so I was tasked with finding vulnerabilities from a WPS scan so I am tasked with reporting from Professor Rains WPS scan output. 
 
   Summary
 
@@ -134,7 +134,7 @@ List any additional assets, such as scripts or files
 - (https://core.trac.wordpress.org/browser/)
 - https://sumofpwn.nl/advisory/2016/cross_site_request_forgery_in_wordpress_press_this_function_allows_dos.html
 - https://exploitbox.io/vuln/WordPress-Exploit-4-7-Unauth-Password-Reset-0day-CVE-2017-8295.html
-https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_vulnerability_in_wordpress_due_to_unsafe_processing_of_file_names.html
+-https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_vulnerability_in_wordpress_due_to_unsafe_processing_of_file_names.html
 
 ## Notes
 
