@@ -26,15 +26,22 @@ List of Vulnerabilities found
 1.  Press This CSRF DoS or CVE-2017-6814 
  
 Summary
+
 A vulnerability is when something gets exposed by being attacked like in this case Word Press. As with open source software such as Word Press it leaves the doors open to the public who can then try to expose the critical flaws it has. For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the plug in so I was tasked with finding vulnerabilities from a WPS scan. 
+
+
+List of Vulnerabilities found
 
 1. Press This CSRF DoS named CVE-2017-6814 is a cross site request forgery that occurs within the “press this page” on WordPress with allows the occurance of publishing with a bookmarklet so an admin can quickly reach their admin page to edit the WordPress documents. 
 
+
 Walkthrough
+
 This can be done by doing a denial of service attack when the admin goes to a malicious webpage by inserting a get request from the server with a /wp-admin/press-this.php?u=<URL>&url-scan-submit=Scan. 
 This vulnerability was founded during a summer of pwnage even by a group who call themselves bughunters in Amsterdam. 
 
 Fix 
+
 Install WordPress version 4.7.3 or higher
 https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/
 
