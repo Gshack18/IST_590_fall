@@ -104,6 +104,22 @@ Update to the latest version of WordPress
 https://wordpress.org/news/2016/09/wordpress-4-6-1-security-and-maintenance-release/
 
 
+4. User List Table Cross-Site Scripting (XSS)
+
+Affected
+
+All previous versions up to WordPress 4.2.4
+
+Information
+User List Table Cross-Site Scripting also known be CVE 2015-7989 occurs within a function within the WordPress called wp-includes/class-wp-customize-widgets.php in all previous versions of WordPress 4.2.4 has a time issue where attacks can expose then abuse to do a timing side channel attack 
+
+Walkthrough
+
+WordPress does not filter HTML code from a user supplied input. An attacker can input  scripting code to be executed by the target user's browser which the WordPress application will accept the security context of that untrusted site. This will give the attacker access to the victums cookie session. By not filtering this an attacker can execute SQL query statements into the databse itself therefore gaining access to the users WordPress if he or she is the admin. 
+
+
+Fix
+https://wordpress.org/news/2015/09/wordpress-4-3-1/
 
 
 1. (Optional) Vulnerability Name or ID
