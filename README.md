@@ -215,7 +215,7 @@ List any additional assets, such as scripts or files
 
 ## Notes
 
-It was hard researching how the attacks would work with very little information. 
+It was hard researching how the attacks would work with very little information because I couldn't get the Vitural Machine and running on a 2015 mac book pro. 
 
 ## License
 
