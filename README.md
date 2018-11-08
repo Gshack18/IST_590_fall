@@ -37,8 +37,8 @@ A vulnerability is when something gets exposed by being attacked like in this ca
 
 1.  Press This CSRF DoS or CVE-2017-6814 
 
-ulnerability types: CSRF
-Fixed in version: 4.7.3
+Affected
+Vulnerability types: CSRF
 
  Hitory
 
@@ -66,8 +66,7 @@ https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-rele
 
 2. Host Header Injection in Password Reset
 
-ulnerability types: Password Rest
-Fixed in version: 4.9.7
+Vulnerability types: Password Rest
 
 Affected
 WordPress versions up  4.7.4
@@ -111,8 +110,8 @@ https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-rele
 
 3.Authenticated Stored Cross-Site Scripting via Image Filename
 
+Affected
 Vulnerability types: XSS
-Fixed in version: 4.6.1
 
 History
 
@@ -153,7 +152,7 @@ Fixed in version: 4.7.3
 
 Affected
 
-All previous versions up to WordPress 4.2.4
+All versions up to WordPress 4.2.4
 
 Information
 User List Table Cross-Site Scripting also known be CVE 2015-7989 occurs within a function within the WordPress called wp-includes/class-wp-customize-widgets.php in all previous versions of WordPress 4.2.4 has a time issue where attacks can expose then abuse to do a timing side channel attack 
@@ -168,8 +167,8 @@ https://wordpress.org/news/2015/09/wordpress-4-3-1/
 
 6 'newbloguser' Key Weak Hashing
 
-ulnerability types: Hasing
-Fixed in version: 4.9.1
+Affected
+Vulnerability types: Hasing
 
 Information
 
