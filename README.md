@@ -23,11 +23,11 @@ List of Vulnerabilities found
 
 -[!] Title: WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
 
+-[!] Title: WordPress 4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
+
 -[!] Title: WordPress 4.1-4.3 - User List Table Cross-Site Scripting (XSS)
 
 -[!] Title: WordPress 3.7-4.9 - 'newbloguser' Key Weak Hashing
-
--[!] Title: WordPress 4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
 
 
 
@@ -135,8 +135,22 @@ Fix
 Update to the latest version of WordPress
 https://wordpress.org/news/2016/09/wordpress-4-6-1-security-and-maintenance-release/
 
+6 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
 
-4. User List Table Cross-Site Scripting (XSS)
+Vulnerability types: XSS
+
+Informatio
+
+
+Walkthrough
+Any user with contributor access or even high would create a post or comment which then would load an "onload" alert XSS script to the users computers.
+
+```
+[embed src='https://youtube.com/embed/somethinghere onload=alert(1)\x3e'][/embed]
+```
+Fixed in version: 4.7.3
+
+5. User List Table Cross-Site Scripting (XSS)
 
 Affected
 
@@ -153,7 +167,7 @@ WordPress does not filter HTML code from a user supplied input. An attacker can 
 Fix
 https://wordpress.org/news/2015/09/wordpress-4-3-1/
 
-5 'newbloguser' Key Weak Hashing
+6 'newbloguser' Key Weak Hashing
 
 ulnerability types: Hasing
 Fixed in version: 4.9.1
@@ -172,17 +186,7 @@ Update to WordPress 4.9.1
 https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-release/
 
 
-6  Title: WordPress 4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
 
-Vulnerability types: XSS
-
-Walkthrough
-Any user with contributor access or even high would create a post or comment which then would load an "onload" alert XSS script to the users computers.
-
-```
-[embed src='https://youtube.com/embed/somethinghere onload=alert(1)\x3e'][/embed]
-```
-Fixed in version: 4.7.3
 
 1. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
@@ -199,7 +203,7 @@ Fixed in version: 4.7.3
 List any additional assets, such as scripts or files
 
 ## Resources
-
+[arbitrary case-insensitive reference text]
 - (https://core.trac.wordpress.org/browser/)
 - https://sumofpwn.nl/advisory/2016/cross_site_request_forgery_in_wordpress_press_this_function_allows_dos.html
 - https://exploitbox.io/vuln/WordPress-Exploit-4-7-Unauth-Password-Reset-0day-CVE-2017-8295.html
