@@ -5,17 +5,17 @@
 
 ## Pentesting Report
 
-## For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the
-## plug in so I was tasked with finding vulnerabilities from a WPS scan so I am tasked with reporting from Professor Rains WPS
-## scan output. 
+# For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the
+# plug in so I was tasked with finding vulnerabilities from a WPS scan so I am tasked with reporting from Professor Rains WPS
+# scan output. 
 
 Time spent: 9 hours spent in total
 
-> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+> Objective: Find, analyze, recreate, and document **six vulnerabilities** affecting an old version of WordPress
 Table of Contents
 
-Summary
-List of Vulnerabilities found
+##Summary
+## List of Vulnerabilities found
 
 -[!] Title: WordPress 4.2-4.7.2 - Press This CSRF DoS
 
@@ -31,7 +31,7 @@ List of Vulnerabilities found
 
 
 
-  Summary
+ # Summary
 
 A vulnerability is when something gets exposed by being attacked like in this case Word Press. As with open source software such as Word Press it leaves the doors open to the public who can then try to expose the critical flaws it has. 
 
