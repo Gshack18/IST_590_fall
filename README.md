@@ -21,7 +21,7 @@ List of Vulnerabilities found
 
 -[!] Title: WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
 
--[!] Title: WordPress <= 4.3 - User List Table Cross-Site Scripting (XSS)
+-[!] Title: WordPress 4.1-4.3 - User List Table Cross-Site Scripting (XSS)
 
 -[!] Title: WordPress 3.7-4.9 - 'newbloguser' Key Weak Hashing
 
