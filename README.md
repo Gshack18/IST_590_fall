@@ -5,7 +5,9 @@
 
 ## Pentesting Report
 
-## For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the ## plug in so I was tasked with finding vulnerabilities from a WPS scan so I am tasked with reporting from Professor Rains WPS ## scan output. 
+## For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the
+## plug in so I was tasked with finding vulnerabilities from a WPS scan so I am tasked with reporting from Professor Rains WPS
+## scan output. 
 
 Time spent: 9 hours spent in total
 
@@ -173,9 +175,6 @@ https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-rele
 6  Title: WordPress 4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
 
 Vulnerability types: XSS
-Fixed in version: 4.7.3
-
-
 
 Walkthrough
 Any user with contributor access or even high would create a post or comment which then would load an "onload" alert XSS script to the users computers.
@@ -183,7 +182,7 @@ Any user with contributor access or even high would create a post or comment whi
 ```
 [embed src='https://youtube.com/embed/somethinghere onload=alert(1)\x3e'][/embed]
 ```
-
+Fixed in version: 4.7.3
 
 1. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
