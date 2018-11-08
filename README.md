@@ -14,7 +14,7 @@ Time spent: 9 hours spent in total
 > Objective: Find, analyze, recreate, and document **six vulnerabilities** affecting an old version of WordPress
 Table of Contents
 
-##Summary
+
 ## List of Vulnerabilities found
 
 -[!] Title: WordPress 4.2-4.7.2 - Press This CSRF DoS
@@ -30,8 +30,7 @@ Table of Contents
 -[!] Title: WordPress 3.7-4.9 - 'newbloguser' Key Weak Hashing
 
 
-
- # Summary
+##Summary Report
 
 A vulnerability is when something gets exposed by being attacked like in this case Word Press. As with open source software such as Word Press it leaves the doors open to the public who can then try to expose the critical flaws it has. 
 
@@ -214,7 +213,7 @@ List any additional assets, such as scripts or files
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+It was hard researching how the attacks would work with very little information. 
 
 ## License
 
