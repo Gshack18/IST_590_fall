@@ -23,6 +23,8 @@ List of Vulnerabilities found
 
 -[!] Title: WordPress <= 4.3 - User List Table Cross-Site Scripting (XSS)
 
+-[!] Title: WordPress 3.7-4.9 - 'newbloguser' Key Weak Hashing
+
 
 
   Summary
@@ -121,6 +123,23 @@ WordPress does not filter HTML code from a user supplied input. An attacker can 
 Fix
 https://wordpress.org/news/2015/09/wordpress-4-3-1/
 
+5 'newbloguser' Key Weak Hashing
+
+Information
+
+CVE-2017-17091 is a Key Weak Hasing Vulnabilty allows a string to be captured directly from the user's ID including the admin. This method would allow attacks to bypass logins before entering in this string which was intended for restrition purposes only.
+
+Walkthrough
+
+WordPress has a file called wp-admin/user-new.php in before version 4.9.1 which sets the newbloguser key be tied to the user id number any user. One one have to inject certain code into the user-new.php file to then allow the exploit to happen.
+
+Fix 
+Harden te user-admin.php by having it generate the user ids bg encrypting them all securely.
+Update to WordPress 4.9.1
+https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-release/
+
+
+6
 
 1. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
@@ -151,6 +170,9 @@ List any additional assets, such as scripts or files
 - https://sumofpwn.nl/advisory/2016/cross_site_request_forgery_in_wordpress_press_this_function_allows_dos.html
 - https://exploitbox.io/vuln/WordPress-Exploit-4-7-Unauth-Password-Reset-0day-CVE-2017-8295.html
 -https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_vulnerability_in_wordpress_due_to_unsafe_processing_of_file_names.html
+- https://wpvulndb.com/vulnerabilities/8969
+- https://github.com/WordPress/WordPress/blob/eaf1cfdc1fe0bdffabd8d879c591b864d833326c/wp-admin/user-new.php
+- 
 
 ## Notes
 
