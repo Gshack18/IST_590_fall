@@ -25,6 +25,8 @@ List of Vulnerabilities found
 
 -[!] Title: WordPress 3.7-4.9 - 'newbloguser' Key Weak Hashing
 
+-[!] Title: WordPress 4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
+
 
 
   Summary
@@ -33,6 +35,9 @@ A vulnerability is when something gets exposed by being attacked like in this ca
 
 
 1.  Press This CSRF DoS or CVE-2017-6814 
+
+ulnerability types: CSRF
+Fixed in version: 4.7.3
 
  Hitory
 
@@ -45,8 +50,12 @@ Vulnerability type
 
 Walkthrough
 
-This can be done by doing a denial of service attack when the admin goes to a malicious webpage by inserting a get request from the server with a /wp-admin/press-this.php?u=<URL>&url-scan-submit=Scan. 
+This can be done by doing a denial of service attack when the admin goes to a malicious webpage by inserting a get request from the server with a 
 
+```
+/wp-admin/press-this.php?u=<URL>&url-scan-submit=Scan. 
+```
+Because there is no maxium amount of data the "Press This" can get anything can happen from the attack by putting in a long URL to then overload he WordPress server to overload causing a DOS shutdown.
 
 Fix 
 
@@ -55,6 +64,9 @@ https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-rele
 
 
 2. Host Header Injection in Password Reset
+
+ulnerability types: Password Rest
+Fixed in version: 4.9.7
 
 Affected
 WordPress versions up  4.7.4
@@ -73,7 +85,19 @@ Walkthrough
 
 WordPress uses untrusted data by default when a user such as an admin user tries to get a new password link to then gain access to his admin page. 
 WorPress uses a SERVER_NAME variable on the server within its return path header for outgoing request. An attack can modify this varabile to a domain of their chosing therefore the $from_email is changed to go the attacks inbox instead.
+
+```
+-----[ HTTP Request ]----
+
+POST /wp/wordpress/wp-login.php?action=lostpassword HTTP/1.1
+Host: injected-attackers-mxserver.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 56
+
 user_login=admin&redirect_to=&wp-submit=Get+New+Password
+```
+
+Within the fields Return-Path all have the attacker's domain set to then return to the attack.
 
 The attack would be allowed to intercept the password reset link and gain access to the page with the session WordPress gave in the link to change a users password. 
 
@@ -86,9 +110,8 @@ https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-rele
 
 3.Authenticated Stored Cross-Site Scripting via Image Filename
 
-Affected 
-
-WordPress versions 2.5-4.6
+Vulnerability types: XSS
+Fixed in version: 4.6.1
 
 History
 
@@ -100,6 +123,11 @@ Authenticated Stored Cross-Site Scripting via Image Filename allows a user to ma
 Walkthrough
 
 Create an image as a jpg file and have the name set to something long but use the HTML code <img src=a onerror=XSS script here with the document.cookie > to force the web server getting the posted image to then perform this XSS script action. Then the attack would look at the image which was uploading to see what the output was such as session cookies and so on.
+```
+[caption width='1' caption='<a href="' ">]</a><a href="onmouseover='alert(1)'">
+```
+We know that the Post.php does not filter any thpe of shortcode for its HTML process and therefor can be exposed.
+
 
 Fix
 Update to the latest version of WordPress
@@ -125,6 +153,9 @@ https://wordpress.org/news/2015/09/wordpress-4-3-1/
 
 5 'newbloguser' Key Weak Hashing
 
+ulnerability types: Hasing
+Fixed in version: 4.9.1
+
 Information
 
 CVE-2017-17091 is a Key Weak Hasing Vulnabilty allows a string to be captured directly from the user's ID including the admin. This method would allow attacks to bypass logins before entering in this string which was intended for restrition purposes only.
@@ -139,17 +170,21 @@ Update to WordPress 4.9.1
 https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-release/
 
 
-6
+6  Title: WordPress 4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
 
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+Vulnerability types: XSS
+Fixed in version: 4.7.3
+
+
+
+Walkthrough
+Any user with contributor access or even high would create a post or comment which then would load an "onload" alert XSS script to the users computers.
+
+```
+[embed src='https://youtube.com/embed/somethinghere onload=alert(1)\x3e'][/embed]
+```
+
+
 1. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
