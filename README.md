@@ -203,7 +203,7 @@ https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-rele
 List any additional assets, such as scripts or files
 
 ## Resources
--(https://core.trac.wordpress.org/browser/"WordPress Core")
+-(https://core.trac.wordpress.org/browser/ "WordPress Core")
 -[Press This Button] https://sumofpwn.nl/advisory/2016/cross_site_request_forgery_in_wordpress_press_this_function_allows_dos.html
 - [Unath Password Rest] https://exploitbox.io/vuln/WordPress-Exploit-4-7-Unauth-Password-Reset-0day-CVE-2017-8295.html
 -[XSS unsafe Processing] https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_vulnerability_in_wordpress_due_to_unsafe_processing_of_file_names.html
