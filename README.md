@@ -1,7 +1,7 @@
 # IST_590_fall
-# This is for IST 590 class
+This is for IST 590 class
 
-# Project 7 - WordPress Pentesting
+Project 7 - WordPress Pentesting
 
 ## Pentesting Report
 
