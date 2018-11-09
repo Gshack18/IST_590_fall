@@ -59,7 +59,7 @@ Because there is no maxium amount of data the "Press This" can get anything can 
 Fix 
 
 Install WordPress version 4.7.3 or higher
-https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/
+- https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/
 
 
 2. Host Header Injection in Password Reset
@@ -103,10 +103,10 @@ The attack would be allowed to intercept the password reset link and gain access
 
 Fix
 users can enable UseCanonicalName to enforce static SERVER_NAME value within the apache server.
-https://httpd.apache.org/docs/2.4/mod/core.html#usecanonicalname
+- https://httpd.apache.org/docs/2.4/mod/core.html#usecanonicalname
 
 Update to the latest version of WordPress
-https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/
+- https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/
 
 3.Authenticated Stored Cross-Site Scripting via Image Filename
 
@@ -133,8 +133,7 @@ We know that the Post.php does not filter any thpe of shortcode for its HTML pro
 
 Fix
 Update to the latest version of WordPress
-
-https://wordpress.org/news/2016/09/wordpress-4-6-1-security-and-maintenance-release/
+- https://wordpress.org/news/2016/09/wordpress-4-6-1-security-and-maintenance-release/
 
 6 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
 
@@ -167,7 +166,7 @@ WordPress does not filter HTML code from a user supplied input. An attacker can 
 
 
 Fix
-https://wordpress.org/news/2015/09/wordpress-4-3-1/
+- https://wordpress.org/news/2015/09/wordpress-4-3-1/
 
 6 'newbloguser' Key Weak Hashing
 
@@ -190,7 +189,7 @@ wp-admin/user-new.php
 Fix 
 Harden te user-admin.php by having it generate the user ids bg encrypting them all securely.
 Update to WordPress 4.9.1
-https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-release/
+- https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-release/
 
 
 
