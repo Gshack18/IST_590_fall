@@ -7,7 +7,7 @@ Project 7 - WordPress Pentesting
 
 <!--- For IST 590 I couldn’t get the virtual machine to build with “vagrant up” command even though I had it installed with the plug in so I was tasked with finding vulnerabilities from a WPS scan so I am tasked with reporting from Professor Rains WPS scan output. --->
 
-Time spent: 9 hours spent in total
+Time spent: 9 hours spent in total because I couldn't get it up and running in Vbox
 
 > Objective: Find, analyze, recreate, and document **six vulnerabilities** affecting an old version of WordPress
 Table of Contents
@@ -38,7 +38,7 @@ A vulnerability is when something gets exposed by being attacked like in this ca
 Affected
 Vulnerability types: CSRF
 
- Hitory
+History
 
 This vulnerability was founded during a summer of pwnage even by a group who call themselves bughunters in Amsterdam. 
 
@@ -77,7 +77,7 @@ Summary
 
 Host Header Injection in Password Reset or better known as CVE-2017-8295 was released in 2017 with a medium to high severity risk for WordPress. This was a zero day attack it was unknown to researches to patch when it was released. 
 
-Because WordPress uses PHP as well as MYSQL for its database this can be attacked where an attacker can gain control of the reset password link when one resets their password. 
+Because WordPress uses PHP as well as MYSQL for its database, this can be attacked where an attacker can gain control of the reset password link when one resets their password. 
 
 Walkthrough
 
@@ -89,7 +89,7 @@ Source Code
 -----[ HTTP Request ]----
 
 POST /wp/wordpress/wp-login.php?action=lostpassword HTTP/1.1
-Host: injected-attackers-mxserver.com
+Host: Attacker-Own-Website.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 56
 
@@ -146,7 +146,7 @@ Any user with contributor access or even high would create a post or comment whi
 
 Souce Code
 ```
-[embed src='https://youtube.com/embed/somethinghere onload=alert(1)\x3e'][/embed]
+[embed src='https://youtube.com/embed/somethingheretooverload onload=alert(1)\x3e'][/embed]
 ```
 Fixed in version: 4.7.3
 
