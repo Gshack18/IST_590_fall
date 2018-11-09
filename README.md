@@ -104,6 +104,7 @@ The attack would be allowed to intercept the password reset link and gain access
 Fix
 users can enable UseCanonicalName to enforce static SERVER_NAME value within the apache server.
 https://httpd.apache.org/docs/2.4/mod/core.html#usecanonicalname
+
 Update to the latest version of WordPress
 https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/
 
