@@ -133,6 +133,7 @@ We know that the Post.php does not filter any thpe of shortcode for its HTML pro
 
 Fix
 Update to the latest version of WordPress
+
 https://wordpress.org/news/2016/09/wordpress-4-6-1-security-and-maintenance-release/
 
 6 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
