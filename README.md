@@ -1,5 +1,5 @@
 # IST_590_fall
-This is for IST 590 class
+This is for IST 590 class because my VM wouldn't work with Vagrant on a MacBookPro 2015
 
 Project 7 - WordPress Pentesting
 
@@ -42,9 +42,9 @@ Vulnerability types: CSRF
 
 This vulnerability was founded during a summer of pwnage even by a group who call themselves bughunters in Amsterdam. 
 
-Vulnerability type
+Summary
 
- Press This CSRF DoS named CVE-2017-6814 is a cross site request forgery that occurs within the “press this page” on WordPress with allows the occurance of publishing with a bookmarklet so an admin can quickly reach their admin page to edit the WordPress documents. 
+The Press This CSRF DoS named CVE-2017-6814 is a cross site request forgery that occurs within the “press this page” on WordPress with allows the occurance of publishing with a bookmarklet so an admin can quickly reach their admin page to edit the WordPress documents can be exposed. 
 
 
 Walkthrough
@@ -73,7 +73,7 @@ History
 
 Dawid Golunski discoveried this Password Reset inject into the Host header in 2017.
 
-Vulnerability type
+Summary
 
 Host Header Injection in Password Reset or better known as CVE-2017-8295 was released in 2017 with a medium to high severity risk for WordPress. This was a zero day attack it was unknown to researches to patch when it was released. 
 
@@ -84,6 +84,7 @@ Walkthrough
 WordPress uses untrusted data by default when a user such as an admin user tries to get a new password link to then gain access to his admin page. 
 WorPress uses a SERVER_NAME variable on the server within its return path header for outgoing request. An attack can modify this varabile to a domain of their chosing therefore the $from_email is changed to go the attacks inbox instead.
 
+Source Code
 ```
 -----[ HTTP Request ]----
 
@@ -115,12 +116,14 @@ History
 
 It was first saw at the Summer of Pwnage event by a group called bughunters in Amsterdam.
 
-Vulnerability type
+Summary
 
 Authenticated Stored Cross-Site Scripting via Image Filename allows a user to make a certain kind of image which then is uploaded to WordPress injects javascript into the WordPress application server. This code within the image can then gather all types of information about the user, web server, as well as other people who are stored inside the database. This would then allow the attack to get users session id tokens to then login as that user to then do what s/he wants to do.
 Walkthrough
 
 Create an image as a jpg file and have the name set to something long but use the HTML code <img src=a onerror=XSS script here with the document.cookie > to force the web server getting the posted image to then perform this XSS script action. Then the attack would look at the image which was uploading to see what the output was such as session cookies and so on.
+
+Souce Code
 ```
 [caption width='1' caption='<a href="' ">]</a><a href="onmouseover='alert(1)'">
 ```
@@ -135,12 +138,12 @@ https://wordpress.org/news/2016/09/wordpress-4-6-1-security-and-maintenance-rele
 
 Vulnerability types: XSS
 
-Informatio
-
+Summary
 
 Walkthrough
 Any user with contributor access or even high would create a post or comment which then would load an "onload" alert XSS script to the users computers.
 
+Souce Code
 ```
 [embed src='https://youtube.com/embed/somethinghere onload=alert(1)\x3e'][/embed]
 ```
@@ -152,7 +155,8 @@ Affected
 
 All versions up to WordPress 4.2.4
 
-Information
+Summary
+
 User List Table Cross-Site Scripting also known be CVE 2015-7989 occurs within a function within the WordPress called wp-includes/class-wp-customize-widgets.php in all previous versions of WordPress 4.2.4 has a time issue where attacks can expose then abuse to do a timing side channel attack 
 
 Walkthrough
@@ -168,7 +172,7 @@ https://wordpress.org/news/2015/09/wordpress-4-3-1/
 Affected
 Vulnerability types: Hasing
 
-Information
+Summary
 
 CVE-2017-17091 is a Key Weak Hasing Vulnabilty allows a string to be captured directly from the user's ID including the admin. This method would allow attacks to bypass logins before entering in this string which was intended for restrition purposes only.
 
@@ -176,23 +180,17 @@ Walkthrough
 
 WordPress has a file called wp-admin/user-new.php in before version 4.9.1 which sets the newbloguser key be tied to the user id number any user. One one have to inject certain code into the user-new.php file to then allow the exploit to happen.
 
+Source Code
+```
+wp-admin/user-new.php
+```
+
 Fix 
 Harden te user-admin.php by having it generate the user ids bg encrypting them all securely.
 Update to WordPress 4.9.1
 https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-release/
 
 
-
-
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
 
 ## Assets
 
@@ -217,7 +215,7 @@ It was hard researching how the attacks would work with very little information 
 
 ## License
 
-    Copyright [2018] [name of Gaylan]
+    Copyright [2018] [of Gaylan]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
