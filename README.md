@@ -1,6 +1,3 @@
-# IST_590_fall
-This is for IST 590 class because my VM wouldn't work with Vagrant on a MacBookPro 2015
-
 Project 7 - WordPress Pentesting
 
 ## Pentesting Report
